@@ -1,8 +1,12 @@
-import { Route, useParams } from 'react-router-dom'
 import MessagesPanel from './MessagesPanel'
+import SideChatList from '../components/SideChatList'
 
-function MainPage() {
-	useParams()
+function MainPage({ selectedUser, users }) {
+	console.log(selectedUser)
+	//  const {chatId} = useParams()
+	//  const selectedChat = chatId
+	//  ? chats.filter(chat => chat.id === chatId)
+	//  : chats
 
 	return (
 		<div className="main-wrapper">
@@ -14,10 +18,10 @@ function MainPage() {
 						className="avatar"
 						width="50"
 						height="50"
-						src="https://robohash.org/2"
-						alt=""
+						src={selectedUser.avatar}
+						alt={`avatar ${selectedUser.firstName} ${selectedUser.lastName}`}
 					/>
-					<h3>Tin Man</h3>
+					<h3>{`${selectedUser.firstName} ${selectedUser.lastName}`}</h3>
 				</header>
 
 				{/* <!-- Search form --> */}
@@ -30,12 +34,8 @@ function MainPage() {
 					/>
 				</form>
 
-				{/* <!--  */}
-
 				{/* Side Chat List goes here. Check side-chat-list.html */}
-
-				{/* --> */}
-				{/* <!--  --> */}
+				<SideChatList />
 			</aside>
 
 			{/* <!-- Main Chat Section --> */}
@@ -43,13 +43,8 @@ function MainPage() {
 				{/* <!-- Chat header --> */}
 				<header className="panel"></header>
 
-				{/* <!--  */}
+				<MessagesPanel />
 
-				{/* The Messages List will go here. Check main-messages-list.html
-     --> */}
-				<Route path="/logged-in/:chatId" exact>
-					<MessagesPanel />
-				</Route>
 				<ul className="conversation__messages"></ul>
 
 				{/* <!-- Message Box --> */}

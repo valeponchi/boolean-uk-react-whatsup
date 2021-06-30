@@ -5,14 +5,14 @@ Make sure you read all the instructions carefully
 We're going to recreate an app that you might be familiar with, and apply all the concepts we've learned so far! This way we get to see how versatile React Can be!! You should be able to complete this exercise with only the basics of React, but you're welcome to try and use some of the libraries we've shown you in the meantime!!
 
 Instructions
-- Use this starter template => https://codesandbox.io/s/whatsup-react-starter-template-8zjgj
-- Make sure you start your json-server using node db/server.js
--  You'll have to restart the server manually if you make changes to db.json
-- Make sure you read the API endpoints section
-- Render the login page, with the route /login
-- Render the main app page with the route /logged-in
+- ✅Use this starter template => https://codesandbox.io/s/whatsup-react-starter-template-8zjgj
+- ✅Make sure you start your json-server using node db/server.js
+- ✅You'll have to restart the server manually if you make changes to db.json
+- ✅Make sure you read the API endpoints section
+- ✅Render the login page, with the route /login
+- ✅Render the main app page with the route /logged-in
 - Render the messages panel within the main app with the route /logged-in/:chatId
-- When you land on the app, you should be taken to the login page
+- ✅When you land on the app, you should be taken to the login page
 - If you navigate to /logged-in without choosing a user, you should be redirected to /login
 
 Side panel
@@ -26,6 +26,7 @@ Chat messages main panel
 - Render a message box 
 - When a user submits a message, it should appear on the messages panel above
 - If you change users, the new messages should appear as well in their chat
+
 @here
 Api Endpoints
 Make sure you also check the database structure to better understand what to post in your requests
