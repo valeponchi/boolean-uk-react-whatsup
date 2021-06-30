@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "phoneNumber": "+44777777777",
+      "avatar": "https://robohash.org/1"
+    },
+    {
+      "id": 2,
+      "firstName": "Tin",
+      "lastName": "Man",
+      "phoneNumber": "+44777766666",
+      "avatar": "https://robohash.org/2"
+    },
+    {
+      "id": 3,
+      "firstName": "Carl",
+      "lastName": "T-800",
+      "phoneNumber": "+1 888-512-1984",
+      "avatar": "https://robohash.org/3"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.",
+      "userId": 1,
+      "conversationId": 1
+    },
+    {
+      "id": 2,
+      "messageText": "Lorem ipsum...",
+      "userId": 1,
+      "conversationId": 1
+    },
+    {
+      "id": 3,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! ",
+      "userId": 2,
+      "conversationId": 1
+    },
+    {
+      "id": 4,
+      "messageText": "Lorem ipsum dolor sit amet consectetur.",
+      "userId": 2,
+      "conversationId": 2
+    },
+    {
+      "id": 5,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi.",
+      "userId": 1,
+      "conversationId": 2
+    },
+    {
+      "id": 6,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non ",
+      "userId": 2,
+      "conversationId": 2
+    },
+    {
+      "id": 7,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.",
+      "userId": 1,
+      "conversationId": 2
+    },
+    {
+      "userId": 1,
+      "messageText": "Some test message",
+      "conversationId": 1,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "messageText": "Let's catch up some time!",
+      "conversationId": 2,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "messageText": "more messagesss!!!",
+      "conversationId": 1,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "messageText": "more messagesss!!!",
+      "conversationId": 1,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "messageText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus excepturi non odit quisquam et assumenda suscipit maxime officiis repellat possimus! Soluta illum rerum eligendi labore ut nemo quod voluptates ad.",
+      "conversationId": 1,
+      "id": 12
+    }
+  ],
+  "conversations": [
+    {
+      "id": 1,
+      "userId": 1,
+      "participantId": 2
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "participantId": 3
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "participantId": 3
+    }
+  ]
+}
