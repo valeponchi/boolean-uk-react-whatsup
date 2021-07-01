@@ -31,7 +31,7 @@ function App() {
 					<MainPage selectedUser={selectedUser} users={users} />
 				</Route>
 				<Route path="/logged-in/:chatId" exact>
-					<MessagesPanel />
+					{/* <MessagesPanel /> */}
 				</Route>
 			</Switch>
 		</>

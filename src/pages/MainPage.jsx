@@ -1,8 +1,10 @@
 import MessagesPanel from './MessagesPanel'
 import SideChatList from '../components/SideChatList'
+import { Redirect } from 'react-router-dom'
 
 function MainPage({ selectedUser, users }) {
-	console.log(selectedUser)
+	// if (!selectedUser) return <Redirect to="/login" />
+
 	//  const {chatId} = useParams()
 	//  const selectedChat = chatId
 	//  ? chats.filter(chat => chat.id === chatId)
@@ -35,7 +37,7 @@ function MainPage({ selectedUser, users }) {
 				</form>
 
 				{/* Side Chat List goes here. Check side-chat-list.html */}
-				<SideChatList />
+				<SideChatList users={users} selectedUser={selectedUser} />
 			</aside>
 
 			{/* <!-- Main Chat Section --> */}
