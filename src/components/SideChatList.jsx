@@ -1,4 +1,9 @@
-function SideChatList({ users, selectedUser }) {
+function SideChatList({
+	users,
+	selectedUser,
+	findConversation,
+	conversations,
+}) {
 	return (
 		<ul>
 			{/* <!-- This first item should always be present --> */}
@@ -14,7 +19,11 @@ function SideChatList({ users, selectedUser }) {
 				if (user.id !== selectedUser.id)
 					return (
 						<li key={index}>
-							<button className="chat-button">
+							<button
+								className="chat-button"
+								onClick={() => {
+									findConversation(conversations, user, selectedUser)
+								}}>
 								<img
 									className="avatar"
 									height="50"

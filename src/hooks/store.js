@@ -2,7 +2,9 @@ import create from 'zustand'
 
 const useStore = create((set, get) => ({
 	selectedUser: {},
+	setSelectedUSer: () => {},
 	users: [],
+	setUsers: () => {},
 
 	// todos: ['buy milk', 'cook dinner', 'learn zustand', 'profit'],
 	// addTodo: newTodo => set(store => ({ todos: [...store.todos, newTodo] })),
