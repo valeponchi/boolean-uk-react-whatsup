@@ -1,19 +1,20 @@
 import MessagesPanel from './MessagesPanel'
 import SideChatList from '../components/SideChatList'
-import { Redirect } from 'react-router-dom'
-import { useState } from 'react'
+import { Redirect, Route } from 'react-router-dom'
 
-function MainPage({ selectedUser, users, findConversation, conversations }) {
+function MainPage({
+	selectedUser,
+	users,
+	findConversation,
+	conversations,
+	setMessages,
+	messages,
+}) {
 	if (!selectedUser) return <Redirect to="/login" />
-
-	//  const {chatId} = useParams()
-	//  const selectedChat = chatId
-	//  ? chats.filter(chat => chat.id === chatId)
-	//  : chats
 
 	return (
 		<div className="main-wrapper">
-			{/* <!-- Side Panel --> */}
+			{/* <!-- SIDE PANEL --> */}
 			<aside>
 				{/* <!-- Side Header --> */}
 				<header className="panel">
@@ -27,7 +28,7 @@ function MainPage({ selectedUser, users, findConversation, conversations }) {
 					<h3>{`${selectedUser.firstName} ${selectedUser.lastName}`}</h3>
 				</header>
 
-				{/* <!-- Search form --> */}
+				{/* SEARCH FORM*/}
 				<form className="aside__search-container">
 					<input
 						type="search"
@@ -37,23 +38,29 @@ function MainPage({ selectedUser, users, findConversation, conversations }) {
 					/>
 				</form>
 
-				{/* Side Chat List goes here. Check side-chat-list.html */}
+				{/* SIDE CHAT LIST */}
 				<SideChatList
 					users={users}
 					selectedUser={selectedUser}
 					findConversation={findConversation}
 					conversations={conversations}
+					setMessages={setMessages}
 				/>
 			</aside>
 
-			{/* <!-- Main Chat Section --> */}
+			{/* MAIN CHAT SECTION */}
 			<main className="conversation">
 				{/* <!-- Chat header --> */}
 				<header className="panel"></header>
 
-				<MessagesPanel />
+				{/* MESSAGE BOX */}
+				<ul className="conversation__messages">
+					<Route path="/logged-in/:chatId">
+						<MessagesPanel messages={messages} selectedUser={selectedUser} />
+					</Route>
+				</ul>
 
-				{/* <!-- Message Box --> */}
+				{/* FOOTER  */}
 				<footer>
 					<form className="panel conversation__message-box">
 						<input type="text" placeholder="Type a message" rows="1" value="" />
