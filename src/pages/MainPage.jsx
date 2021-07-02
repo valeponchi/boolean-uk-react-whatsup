@@ -7,10 +7,10 @@ function MainPage({
 	users,
 	findConversation,
 	conversations,
-	setMessages,
 	messages,
+	setMessages,
 }) {
-	if (!selectedUser) return <Redirect to="/login" />
+	if (!selectedUser) return null
 
 	return (
 		<div className="main-wrapper">
@@ -35,6 +35,7 @@ function MainPage({
 						name="messagesSearch"
 						placeholder="Search chats"
 						value=""
+						onChange={() => {}}
 					/>
 				</form>
 
@@ -44,7 +45,6 @@ function MainPage({
 					selectedUser={selectedUser}
 					findConversation={findConversation}
 					conversations={conversations}
-					setMessages={setMessages}
 				/>
 			</aside>
 
@@ -55,15 +55,25 @@ function MainPage({
 
 				{/* MESSAGE BOX */}
 				<ul className="conversation__messages">
-					<Route path="/logged-in/:chatId">
-						<MessagesPanel messages={messages} selectedUser={selectedUser} />
+					<Route path={`/logged-in/:conversationId`}>
+						<MessagesPanel
+							messages={messages}
+							selectedUser={selectedUser}
+							setMessages={setMessages}
+						/>
 					</Route>
 				</ul>
 
 				{/* FOOTER  */}
 				<footer>
 					<form className="panel conversation__message-box">
-						<input type="text" placeholder="Type a message" rows="1" value="" />
+						<input
+							type="text"
+							placeholder="Type a message"
+							rows="1"
+							value=""
+							onChange={() => {}}
+						/>
 						<button type="submit">
 							{/* <!-- This is the send button --> */}
 							<svg
